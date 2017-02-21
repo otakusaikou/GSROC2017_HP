@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% load i18n staticfiles %}
+
+{% block meta_title %}{% trans "potree test" %}{% endblock %}
+{% block title %}{% trans "Potree Test" %}{% endblock %}
+
+{% block extra_css %}
+<meta name="robots" content="noindex">
+<link rel="stylesheet" type="text/css" href="{% static "potree/css/potree.css" %}">
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    var resource_url = "{% static "/potree/resources/" %}";
+</script>
+<script src="{% static "potree/libs/three.js/build/three.js" %}"></script>
+<script src="{% static "potree/libs/other/stats.min.js" %}"></script>
+<script src="{% static "potree/libs/other/dat.gui.min.js" %}"></script>
+<script src="{% static "potree/libs/other/BinaryHeap.js" %}"></script>
+<script src="{% static "potree/libs/tween/tween.min.js" %}"></script>
+<script src="{% static "potree/build/js/potree.js" %}"></script>
+<script src="{% static "potree/js/viewer.js" %}"></script>
+<script src="{% static "potree/js/ProgressBar.js" %}"></script>
+<!-- include additional dependencies here -->
+<script src="{% static "potree/js/P1_C.js" %}"></script>
+{% endblock %}
+
+{% block breadcrumb_menu %}
+{{ block.super }}
+{% endblock %}
+
+{% block main %}
+{% if request.user.is_authenticated %}
+<div id="renderArea" style="width: 105%; height: 500px; overflow: hidden;">
+</div>
+
+<script>
+    var onPointCloudLoaded = function(event){
+        // do stuff here that should be executed once the point cloud has been loaded.
+        // event.pointcloud returns the point cloud object
+        
+    };
+
+    viewer = new Potree.Viewer(document.getElementById("renderArea"), sceneProperties, {
+        "onPointCloudLoaded": onPointCloudLoaded
+    });
+</script>
+<h1></h1>
+{% else %}
+<img src="http://i.imgur.com/dCdQ4wS.jpg">
+{% endif %}
+{% endblock %}

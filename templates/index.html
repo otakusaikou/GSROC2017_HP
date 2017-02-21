@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% load i18n staticfiles %}
+
+{% block meta_title %}{% trans "Home" %}{% endblock %}
+{% block title %}{% trans "Home" %}{% endblock %}
+
+{% block breadcrumb_menu %}
+<li class="active">{% trans "Home" %}</li>
+{% endblock %}
+
+{% block main %}
+<h2><strong>中華民國測地學會年會暨學術研討會</strong></h2>
+<br>
+<div id='introduction'>
+    <p>2017年中華民國測地學會（Geodetic Society Of The Republic Of China）</p>
+    <p>年會暨學術研討會將於8月16日至8月18日於南投縣鹿谷溪頭自然教育園區舉辦。</p>
+    <p>為期三天兩夜的年會將包含測地學會會員大會、學術研討會以及生態導覽活動等</p>
+    <p>內容，歡迎本學會會員共襄盛舉、踴躍報名參加。</p>
+    <br>
+    <p>理事長 黃金維 敬邀</p>
+</div>
+<br>
+<div id='organizer'>
+    <h3><strong>➤ 主辦單位：</strong></h3>
+    <table>
+        <tbody>
+            <tr>
+                <td><a href="http://www.gsroc.org.tw"><img src="{% static "media/uploads/web/geod_logo.jpg" %}" alt="geod_logo.jpg"/></a></td>
+                <td><a href="http://www.geog.ntu.edu.tw"><img src="{% static "media/uploads/web/geog_logo.jpg" %}" alt="geog_logo.jpg"/></a></td>
+                <td><a href="http://www.ce.ntu.edu.tw/"><img src="{% static "media/uploads/web/ce_logo.jpg" %}" alt="ce_logo.jpg"/></a></td>
+                <td><a href="https://www.tl.ntu.edu.tw/"><img src="{% static "media/uploads/web/tl_logo.jpg" %}" alt="tl_logo.jpg"/></a></td>
+            </tr>
+            <tr>
+                <td>
+                    <h4>中華民國測地學會</h4>
+                </td>
+                <td>
+                    <h4>國立臺灣大學</h4>
+                    <h4>地理環境資源學系</h4>
+                </td>
+                <td>
+                    <h4>國立臺灣大學</h4>
+                    <h4>土木工程學系</h4>
+                </td>
+                <td>
+                    <h4>臺大嚴慶齡工業研究中心</h4>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+{% endblock %}

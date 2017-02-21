@@ -1,0 +1,19 @@
+.ol-attribution ul {
+    font-size: smaller;
+}
+
+.venue-content ul {
+    font-size: medium;
+    line-height: 25px;
+    padding-left: 20%;
+}
+
+.nostyle h3 {
+    text-align: center;
+}
+
+img {
+    margin: 0px auto;
+    width: 85%;
+    display: block;
+}
