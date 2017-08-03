@@ -46,7 +46,7 @@ body {
 
 .responstable {
     margin: 1em 0;
-    width: 60%;
+    width: 70%;
     overflow: hidden;
     background: #FFF;
     color: #024457;
@@ -56,6 +56,7 @@ body {
 }
 .responstable tr {
     border: 1px solid #D9E4E6;
+    font-size: larger;
 }
 .responstable tr:nth-child(odd) {
     background-color: #EAF3F3;
@@ -92,7 +93,7 @@ body {
 .responstable td {
     display: block;
     word-wrap: break-word;
-    max-width: 7em;
+/*    max-width: 7em; */
 }
 .responstable td:first-child {
     display: table-cell;
@@ -129,4 +130,80 @@ body {
 
 .red {
     color: red;
+}
+
+.responstable2 {
+    margin: 1em 0;
+    width: 100%;
+    overflow: hidden;
+    background: #FFF;
+    color: #024457;
+    border-radius: 10px;
+    border: 1px solid #167F92;
+    margin: 0px auto;
+}
+.responstable2 tr {
+    border: 1px solid #D9E4E6;
+    font-size: larger;
+}
+/*.responstable2 tr:nth-child(odd) {
+    background-color: #EAF3F3;
+}*/
+.responstable2 th {
+    display: none;
+    border: 1px solid #FFF;
+    background-color: #167F92;
+    color: #FFF;
+    padding: 1em;
+    font-size: larger;
+}
+.responstable2 th:first-child {
+    display: table-cell;
+    text-align: center;
+}
+.responstable2 th:nth-child(2) {
+    display: table-cell;
+}
+.responstable2 th:nth-child(2) span {
+    display: none;
+}
+.responstable2 th:nth-child(2):after {
+    content: attr(data-th);
+}
+@media (min-width: 480px) {
+    .responstable2 th:nth-child(2) span {
+        display: block;
+    }
+    .responstable2 th:nth-child(2):after {
+        display: none;
+    }
+}
+.responstable2 td {
+    display: block;
+    word-wrap: break-word;
+/*    max-width: 7em; */
+}
+.responstable2 td:first-child {
+    display: table-cell;
+    text-align: center;
+    border-right: 1px solid #D9E4E6;
+    font-size: large;
+}
+@media (min-width: 480px) {
+    .responstable2 td {
+        border: 1px solid #D9E4E6;
+    }
+}
+.responstable2 th,
+.responstable2 td {
+    /* text-align: left; */
+    text-align: center;
+    margin: .5em 1em;
+}
+@media (min-width: 480px) {
+    .responstable2 th,
+    .responstable2 td {
+        display: table-cell;
+        padding: 1em;
+    }
 }
